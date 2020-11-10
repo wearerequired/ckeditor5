@@ -1,0 +1,21 @@
+:root {
+	--ck-border-radius: 3px;
+	--ck-color-focus-border: #6DC7E8;
+	--ck-color-base-border: #B6E5F7;
+	--ck-inner-shadow: none;
+	--ck-drop-shadow: none;
+	--ck-drop-shadow-active: none;
+	--ck-color-base-foreground: #F3FCFF;
+	--ck-color-button-default-hover-background: #B6E5F7;
+	--ck-color-button-default-active-background: var(--ck-color-button-default-hover-background);
+	--ck-color-button-on-background: var(--ck-color-button-default-hover-background);
+	--ck-color-button-on-hover-background: #E5F6FC;
+	--ck-color-button-default-active-shadow: transparent;
+	--ck-color-list-button-on-background: #E5F6FC;
+	--ck-color-list-button-on-background-focus: #6DC7E8;
+	--ck-color-list-button-on-text: #222;
+}
+
+.ck.ck-editor__main > .ck-editor__editable {
+	transition: border 180ms cubic-bezier(0.455, 0.03, 0.515, 0.955)
+}
