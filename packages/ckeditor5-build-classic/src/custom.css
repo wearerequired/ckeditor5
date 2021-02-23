@@ -1,18 +1,22 @@
 :root {
+	--ck-color-link-default: #00a3df;
 	--ck-border-radius: 3px;
 	--ck-color-focus-border: #6DC7E8;
 	--ck-color-base-border: #B6E5F7;
+	--ck-focus-outer-shadow-geometry: 0;
 	--ck-inner-shadow: none;
 	--ck-drop-shadow: none;
 	--ck-drop-shadow-active: none;
 	--ck-color-base-foreground: #F3FCFF;
+
 	--ck-color-button-default-hover-background: #B6E5F7;
 	--ck-color-button-default-active-background: var(--ck-color-button-default-hover-background);
 	--ck-color-button-on-background: var(--ck-color-button-default-hover-background);
 	--ck-color-button-on-hover-background: #E5F6FC;
 	--ck-color-button-default-active-shadow: transparent;
-	--ck-color-list-button-on-background: #E5F6FC;
-	--ck-color-list-button-on-background-focus: #6DC7E8;
+
+	--ck-color-list-button-on-background: var(--ck-color-button-on-hover-background);
+	--ck-color-list-button-on-background-focus: var(--ck-color-focus-border);
 	--ck-color-list-button-on-text: #222;
 }
 
@@ -27,8 +31,27 @@
 	--ck-color-toolbar-background: var(--ck-color-base-background);
 	--ck-color-base-border: #2e82a2;
 	--ck-color-focus-border: #109bd0;
+	--ck-focus-ring: 1px solid var(--ck-color-focus-border);
+
 	--ck-color-toolbar-border: var(--ck-color-base-border);
+
 	--ck-color-button-default-hover-background: #00a3df;
 	--ck-color-button-default-active-background: var(--ck-color-button-default-hover-background);
 	--ck-color-button-on-background: var(--ck-color-button-default-hover-background);
+	--ck-color-button-on-hover-background: #2e82a2;
+
+	--ck-color-dropdown-panel-background: var(--ck-color-base-background);
+	--ck-color-dropdown-panel-border: var(--ck-color-base-border);
+
+	--ck-color-list-background: var(--ck-color-base-background);
+	--ck-color-list-button-hover-background: var(--ck-color-button-default-hover-background);
+	--ck-color-list-button-on-background: var(--ck-color-button-on-hover-background);
+	--ck-color-list-button-on-background-focus: var(--ck-color-focus-border);
+	--ck-color-list-button-on-text: var(--ck-color-base-background);
+
+	--ck-color-panel-background: var(--ck-color-base-background);
+	--ck-color-panel-border: var(--ck-color-base-border);
+
+	--ck-color-input-background: var(--ck-color-base-background);
+	--ck-color-labeled-field-label-background: var(--ck-color-base-background);
 }
