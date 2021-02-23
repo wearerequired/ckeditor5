@@ -19,3 +19,16 @@
 .ck.ck-editor__main > .ck-editor__editable {
 	transition: border 180ms cubic-bezier(0.455, 0.03, 0.515, 0.955)
 }
+
+.dark-mode {
+	--ck-color-text: #fff;
+	--ck-color-base-background: #002f42;
+	--ck-color-base-foreground: var(--ck-color-base-background);
+	--ck-color-toolbar-background: var(--ck-color-base-background);
+	--ck-color-base-border: #2e82a2;
+	--ck-color-focus-border: #109bd0;
+	--ck-color-toolbar-border: var(--ck-color-base-border);
+	--ck-color-button-default-hover-background: #00a3df;
+	--ck-color-button-default-active-background: var(--ck-color-button-default-hover-background);
+	--ck-color-button-on-background: var(--ck-color-button-default-hover-background);
+}
