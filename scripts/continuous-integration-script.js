@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md.
  */
 
@@ -104,9 +104,13 @@ console.log( 'Done' );
 if ( Object.values( failedChecks ).some( checksSet => checksSet.size > 0 ) ) {
 	console.log( '\n---\n' );
 
+	console.log( `🔥 ${ RED }Errors were detected by the CI.${ NO_COLOR }\n\n` );
+
 	showFailedCheck( 'dependency', 'The following packages have dependencies that are not included in its package.json' );
 	showFailedCheck( 'unitTests', 'The following packages did not pass unit tests' );
 	showFailedCheck( 'codeCoverage', 'The following packages did not provide required code coverage' );
+
+	console.log( '\n---\n' );
 
 	process.exit( 1 ); // Exit code 1 will break the CI build.
 }
@@ -131,7 +135,7 @@ function runSubprocess( binaryName, cliArguments, packageName, checkName, failMe
 	}
 
 	if ( subprocess.status !== 0 ) {
-		failedChecks.unitTests.add( packageName );
+		failedChecks[ checkName ].add( packageName );
 		console.log( `💥 ${ RED }${ packageName }${ NO_COLOR } ` + failMessage + ' 💥' );
 	}
 }

@@ -1,5 +1,7 @@
 ---
-category: features
+menu-title: Ordered and unordered lists
+category: features-lists
+order: 10
 ---
 
 # Lists
@@ -18,7 +20,10 @@ An unordered (bulleted) list can represent items where the order is not importan
 
 An ordered (numbered) list can be used if the order of the items matters, for example, when creating an instruction. Here, the sequence of steps that must be done is important.
 
-Use the editor below to see the list feature plugin in action.
+Use the editor below to see the list feature plugin in action. Lists can be introduced using toolbar buttons, or with Markdown code provided by the {@link features/autoformat autoformatting feature}:
+
+* Start a line with `*` or `-` followed by a space for a bulleted list.
+* Start a line with `1.` or `1)` followed by a space for a numbered list.
 
 ### Demo
 
@@ -39,6 +44,7 @@ Use the editor below to see the list style plugin in action.
 These features also provide similar functionality:
 * {@link features/todo-lists To-do lists} &ndash; Create a list of interactive checkboxes with labels.
 * {@link features/indent Block indentation} &ndash; Set indentation for text blocks such as paragraphs or headings and lists.
+* {@link features/autoformat Autoformatting} &ndash; Format the text on the go with Markdown code.
 
 ## Installation
 

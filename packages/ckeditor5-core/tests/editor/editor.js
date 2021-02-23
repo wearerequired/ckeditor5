@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -553,6 +553,18 @@ describe( 'Editor', () => {
 			expectToThrowCKEditorError( () => {
 				editor.execute( 'someCommand' );
 			}, /foo/, editor );
+		} );
+	} );
+
+	describe( 'focus()', () => {
+		it( 'should call view\'s focus() method', () => {
+			const editor = new TestEditor();
+			const focusSpy = sinon.spy( editor.editing.view, 'focus' );
+
+			editor.editing.view.document.isFocused = true;
+			editor.focus();
+
+			expect( focusSpy.calledOnce ).to.be.true;
 		} );
 	} );
 

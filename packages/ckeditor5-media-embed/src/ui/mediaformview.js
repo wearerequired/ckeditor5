@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -19,6 +19,7 @@ import submitHandler from '@ckeditor/ckeditor5-ui/src/bindings/submithandler';
 import FocusTracker from '@ckeditor/ckeditor5-utils/src/focustracker';
 import FocusCycler from '@ckeditor/ckeditor5-ui/src/focuscycler';
 import KeystrokeHandler from '@ckeditor/ckeditor5-utils/src/keystrokehandler';
+import injectCssTransitionDisabler from '@ckeditor/ckeditor5-ui/src/bindings/injectcsstransitiondisabler';
 
 import checkIcon from '@ckeditor/ckeditor5-core/theme/icons/check.svg';
 import cancelIcon from '@ckeditor/ckeditor5-core/theme/icons/cancel.svg';
@@ -146,6 +147,8 @@ export default class MediaFormView extends View {
 				this.cancelButtonView
 			]
 		} );
+
+		injectCssTransitionDisabler( this );
 
 		/**
 		 * The default info text for the {@link #urlInputView}.
@@ -282,7 +285,6 @@ export default class MediaFormView extends View {
 
 		labeledInput.label = t( 'Media URL' );
 		labeledInput.infoText = this._urlInputViewInfoDefault;
-		inputField.placeholder = 'https://example.com';
 
 		inputField.on( 'input', () => {
 			// Display the tip text only when there is some value. Otherwise fall back to the default info text.
