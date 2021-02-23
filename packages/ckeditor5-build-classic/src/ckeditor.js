@@ -3,7 +3,6 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
-
 // The editor creator to use.
 import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 
@@ -17,6 +16,7 @@ import List from '@ckeditor/ckeditor5-list/src/list';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
+import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 
 import './custom.css';
 
@@ -34,6 +34,7 @@ ClassicEditor.builtinPlugins = [
 	Paragraph,
 	RemoveFormat,
 	PasteFromOffice,
+	BlockQuote
 ];
 
 // Editor configuration.
@@ -50,6 +51,7 @@ ClassicEditor.defaultConfig = {
 			'link',
 			'bulletedList',
 			'numberedList',
+			'blockQuote',
 			'removeFormat'
 		]
 	},
